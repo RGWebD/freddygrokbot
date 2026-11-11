@@ -10,3 +10,6 @@ Passed Nov 11, 2026 (ET), headless Chromium against the local server (`/workspac
 
 Screenshots in `screenshots/`: hero-1440.png, hero-375.png, full-1440.png, full-768.png, full-375.png, lightbox.png, mobile-menu.png, mobile-nojs.png. Raw results: test-results.json.
 Not a full automated accessibility audit.
+
+# Live check
+Nov 11, 2026 ~5:45 PM ET, https://rgwebd.github.io/freddygrokbot/ : same suite passed at 1440/1024/768/375/320 (no overflow, no broken images, no console errors, no failed requests; lightbox and no-JS checks pass). index, style.css, script.js and all 21 assets return HTTP 200. Screenshots in screenshots/ were re-captured from the live URL.
