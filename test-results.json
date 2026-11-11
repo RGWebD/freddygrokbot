@@ -1,0 +1,69 @@
+{
+ "1440": {
+  "overflow": false,
+  "sw": 1440,
+  "broken": [],
+  "missingAlt": 0,
+  "emptyBtn": 0,
+  "wide": [],
+  "errors": [],
+  "bad": []
+ },
+ "768": {
+  "overflow": false,
+  "sw": 768,
+  "broken": [],
+  "missingAlt": 0,
+  "emptyBtn": 0,
+  "wide": [],
+  "errors": [],
+  "bad": []
+ },
+ "375": {
+  "overflow": false,
+  "sw": 375,
+  "broken": [],
+  "missingAlt": 0,
+  "emptyBtn": 0,
+  "wide": [],
+  "errors": [],
+  "bad": []
+ },
+ "320": {
+  "overflow": false,
+  "sw": 320,
+  "broken": [],
+  "missingAlt": 0,
+  "emptyBtn": 0,
+  "wide": [],
+  "errors": [],
+  "bad": []
+ },
+ "1024": {
+  "overflow": false,
+  "sw": 1024,
+  "broken": [],
+  "missingAlt": 0,
+  "emptyBtn": 0,
+  "wide": [],
+  "errors": [],
+  "bad": []
+ },
+ "lightbox": {
+  "opened": true,
+  "next": "assets/young-reader-1080.webp",
+  "closedOnEsc": true,
+  "errors": []
+ },
+ "mobileMenuVisible": true,
+ "nojs": {
+  "h1": "1",
+  "books": true,
+  "navLinks": 6
+ },
+ "reducedMotion": {
+  "intro": "none",
+  "marquee": "none",
+  "revealOpacity": "1"
+ }
+}
