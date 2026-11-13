@@ -1,16 +1,16 @@
 # Domain migration status
 
-Prepared 2026-11-13 for www.genuine4ever.com.
+Configured 2026-11-13 for www.genuine4ever.com.
 
-## Required sequence
+## Configuration and remaining verification
 
-1. Confirm https://shop.genuine4ever.com/category/all-products and all three product pages work with a valid HTTPS certificate. The shop must remain the Wix site's primary domain.
-2. Set shop.genuine4ever.com as the primary domain of the existing Premium Genuine Life Ent Wix site. Verify that it no longer redirects to www.
-3. Merge the domain migration into main. This branch-published GitHub Pages site reads the root CNAME file. Verify the Pages deployment and custom-domain redirect before changing public DNS.
-4. Change only apex A and www CNAME website records in Wix DNS to the GitHub targets below; retain other subdomains and records.
-5. Verify website, assets, shop links, and known old product URLs. Confirm HTTPS at both www and apex, and enable Enforce HTTPS in GitHub Pages when available.
+1. Completed: catalog, all three book pages, cart, and blog verified over HTTPS at shop.genuine4ever.com. The shop remains the Wix site's primary domain.
+2. Completed: shop.genuine4ever.com is the primary domain of the existing Premium Genuine Life Ent Wix site and no longer redirects to www.
+3. Completed: migration merged into main (f723309e738bed1335535df783da9c93fdd0b474). GitHub Pages run 43475730224 succeeded and the original preview redirects to the custom domain.
+4. Completed: apex A and www CNAME records saved in Wix as shown below and verified in public DNS. Other subdomains and records were retained.
+5. Verified: the new main website and CSS, JavaScript, and logo load over HTTP; the apex redirects to www. All 24 main-site Wix links now use shop.genuine4ever.com. Remaining verification: GitHub's new HTTPS certificate was still provisioning at 12:48 PM America/New_York. Confirm HTTPS at both www and apex, then confirm or enable Enforce HTTPS in GitHub Pages when available. Do not bypass a browser certificate warning.
 
-## Desired website DNS
+## Configured website DNS
 
 | Type | Wix host | Value |
 | --- | --- | --- |
