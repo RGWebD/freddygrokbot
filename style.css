@@ -328,22 +328,18 @@ details p{color:var(--silver);animation:fadeDown .5s var(--ease)}
 @media (max-width:820px){.forever-grid{grid-template-columns:1fr}.forever-copy{text-align:center}.forever-copy .eyebrow{justify-content:center}.forever-rule{margin-inline:auto}}
 @media (prefers-reduced-motion:reduce){.forever-copy h2 em{animation:none}}
 
-/* Hood Certified endorsement rail */
-.endorse{overflow:hidden;background:linear-gradient(180deg,var(--ink),#0d0c09 50%,var(--ink))}
-.endorse .section-head h2{font-family:var(--impact);letter-spacing:.03em;font-size:clamp(2.6rem,7vw,5.5rem);line-height:.95}
-.endorse .section-head h2 em{font-style:normal;color:var(--gold)}
-.endorse .eyebrow{font-size:.9rem;color:var(--gold)}
-.endorse-rail{position:relative;overflow-x:auto;scrollbar-width:none;-webkit-mask:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);mask:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);cursor:grab}
-.endorse-rail::-webkit-scrollbar{display:none}
-.endorse-rail.dragging{cursor:grabbing}
-.endorse-track{display:flex;width:max-content}
-.endorse-set{display:flex;gap:1.25rem;padding:1.5rem .625rem}
-.endorse-card{flex:none;height:clamp(240px,34vw,380px);border-radius:16px;overflow:hidden;position:relative;border:1px solid var(--line);box-shadow:0 24px 50px -24px rgba(0,0,0,.9);transition:transform .5s ease,box-shadow .5s,border-color .5s}
-.endorse-card img{height:100%;width:auto;display:block;filter:saturate(.92);transition:transform .8s ease,filter .5s;-webkit-user-drag:none;user-select:none}
-.endorse-card::after{content:"Hood Certified";position:absolute;left:.75rem;bottom:.75rem;font:700 .62rem/1 var(--body);letter-spacing:.22em;text-transform:uppercase;color:#0b0b0a;background:linear-gradient(135deg,var(--gold),var(--gold2));padding:.45rem .6rem;border-radius:999px;opacity:.92}
-.endorse-card:hover,.endorse-card:focus-visible{transform:translateY(-8px) rotate(-.6deg);border-color:var(--gold);box-shadow:0 30px 60px -22px rgba(167,152,105,.55)}
-.endorse-card:hover img{transform:scale(1.05);filter:saturate(1.05)}
-.endorse .section-head{max-width:none}
+/* Hood Certified endorsement strip */
+.endorse{overflow:hidden;background:linear-gradient(180deg,var(--ink),#0d0c09 50%,var(--ink));padding-bottom:clamp(3rem,6vw,5rem)}
+.endorse .section-head{max-width:none;margin-bottom:clamp(1.5rem,3vw,2.5rem)}
+.endorse .section-head h2{font-family:var(--impact);letter-spacing:.03em;font-size:clamp(2.2rem,5.5vw,4.2rem);line-height:.95}
 .endorse .section-head h2 span,.endorse .section-head h2 em{display:block}
-.endorse .section-head h2 em{font-size:.62em;letter-spacing:.12em;margin-top:.35rem}
-.endorse-card::after{white-space:nowrap}
+.endorse .section-head h2 em{font-style:normal;color:var(--gold);font-size:.6em;letter-spacing:.14em;margin-top:.4rem}
+.endorse-rail{overflow:hidden;border-block:1px solid var(--line);background:linear-gradient(90deg,#0d0c09,#15130d,#0d0c09);padding:14px 0;-webkit-mask:linear-gradient(90deg,transparent,#000 5%,#000 95%,transparent);mask:linear-gradient(90deg,transparent,#000 5%,#000 95%,transparent)}
+.endorse-track{display:flex;width:max-content;animation:endorseScroll 55s linear infinite}
+.endorse-rail:hover .endorse-track,.endorse-rail:focus-within .endorse-track{animation-play-state:paused}
+.endorse-set{display:flex;gap:14px;padding-right:14px}
+.endorse-card{flex:none;width:clamp(150px,16vw,210px);aspect-ratio:1;border-radius:12px;overflow:hidden;border:1px solid rgba(190,181,152,.35);transition:transform .4s ease,border-color .4s}
+.endorse-card img{width:100%;height:100%;object-fit:cover;object-position:center 30%;display:block;filter:saturate(.9)}
+.endorse-card:hover,.endorse-card:focus-visible{transform:scale(1.05);border-color:var(--gold)}
+@keyframes endorseScroll{to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){.endorse-track{animation-duration:160s}}
