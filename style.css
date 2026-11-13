@@ -289,6 +289,27 @@ details p{color:var(--silver);animation:fadeDown .5s var(--ease)}
 
 .events{padding-block:clamp(2rem,5vw,4rem)}
 
-/* Listen / Spotify */
-.listen-player{padding:clamp(.6rem,1.5vw,1rem);border-radius:calc(var(--r) + 8px);border:1px solid var(--line);background:linear-gradient(120deg,#16140e,#0b0b0a 60%),#0b0b0a;box-shadow:0 30px 80px -40px rgba(167,152,105,.45)}
-.listen-player iframe{display:block;border:0;border-radius:12px;width:100%;min-height:352px}
+/* Floating Spotify mini player */
+.mini-player{position:fixed;right:clamp(.75rem,2vw,1.5rem);bottom:clamp(.75rem,2vw,1.5rem);z-index:90;width:min(340px,calc(100vw - 1.5rem))}
+.mp-panel{border-radius:16px;border:1px solid var(--line);background:rgba(11,11,10,.88);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);box-shadow:0 24px 60px -20px rgba(0,0,0,.8),0 0 0 1px rgba(167,152,105,.08),0 10px 40px -18px rgba(167,152,105,.5);overflow:hidden;transform-origin:bottom right;transition:transform .45s cubic-bezier(.2,.8,.2,1),opacity .35s}
+.mp-bar{display:flex;align-items:center;gap:.6rem;padding:.5rem .6rem .45rem .85rem}
+.mp-title{flex:1;font:700 .72rem/1.1 var(--body);letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
+.mp-title small{color:var(--muted);letter-spacing:.12em;font-weight:500;margin-left:.3rem}
+.mp-min{width:26px;height:26px;border-radius:50%;border:1px solid var(--line);background:transparent;color:var(--cream);font-size:1.1rem;line-height:1;cursor:pointer;transition:background .2s}
+.mp-min:hover{background:rgba(190,181,152,.15)}
+.mp-embed{padding:0 .5rem .5rem;min-height:88px}
+.mp-embed iframe{display:block;border:0;border-radius:12px}
+.mp-eq{display:flex;align-items:flex-end;gap:2px;height:12px}
+.mp-eq i{width:3px;height:4px;background:var(--gold);border-radius:1px}
+.mini-player.playing .mp-eq i{animation:mpEq .9s ease-in-out infinite}
+.mini-player.playing .mp-eq i:nth-child(2){animation-delay:-.3s}.mini-player.playing .mp-eq i:nth-child(3){animation-delay:-.6s}
+@keyframes mpEq{0%,100%{height:3px}50%{height:12px}}
+.mp-fab{position:absolute;right:0;bottom:0;width:56px;height:56px;border-radius:50%;border:0;cursor:pointer;color:#0b0b0a;background:linear-gradient(135deg,var(--gold),var(--gold2) 60%,var(--gold3));box-shadow:0 12px 30px -8px rgba(167,152,105,.6);display:grid;place-items:center;opacity:0;transform:scale(.4);pointer-events:none;transition:transform .4s cubic-bezier(.2,.8,.2,1),opacity .3s}
+.mp-fab svg{width:24px;height:24px}
+.mini-player.playing .mp-fab::after{content:"";position:absolute;inset:-6px;border-radius:50%;border:1px solid var(--gold);animation:mpPulse 2s ease-out infinite}
+@keyframes mpPulse{from{opacity:.8;transform:scale(.9)}to{opacity:0;transform:scale(1.35)}}
+.mini-player.min .mp-panel{transform:scale(.2);opacity:0;pointer-events:none}
+.mini-player.min .mp-fab{opacity:1;transform:none;pointer-events:auto}
+.mini-player.min{width:56px;height:56px}
+.mini-player.min .mp-panel{position:absolute;right:0;bottom:0;width:min(340px,calc(100vw - 1.5rem))}
+@media (prefers-reduced-motion:reduce){.mp-panel,.mp-fab{transition:none}.mini-player.playing .mp-eq i,.mini-player.playing .mp-fab::after{animation:none}}
