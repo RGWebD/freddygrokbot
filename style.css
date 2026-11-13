@@ -288,3 +288,7 @@ details p{color:var(--silver);animation:fadeDown .5s var(--ease)}
 }
 
 .events{padding-block:clamp(2rem,5vw,4rem)}
+
+/* Listen / Spotify */
+.listen-player{padding:clamp(.6rem,1.5vw,1rem);border-radius:calc(var(--r) + 8px);border:1px solid var(--line);background:linear-gradient(120deg,#16140e,#0b0b0a 60%),#0b0b0a;box-shadow:0 30px 80px -40px rgba(167,152,105,.45)}
+.listen-player iframe{display:block;border:0;border-radius:12px;width:100%;min-height:352px}
