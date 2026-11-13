@@ -2,13 +2,15 @@
 
 Configured 2026-11-13 for www.genuine4ever.com.
 
-## Configuration and remaining verification
+## Configuration and verification
 
 1. Completed: catalog, all three book pages, cart, and blog verified over HTTPS at shop.genuine4ever.com. The shop remains the Wix site's primary domain.
 2. Completed: shop.genuine4ever.com is the primary domain of the existing Premium Genuine Life Ent Wix site and no longer redirects to www.
 3. Completed: migration merged into main (f723309e738bed1335535df783da9c93fdd0b474). GitHub Pages run 43475730224 succeeded and the original preview redirects to the custom domain.
 4. Completed: apex A and www CNAME records saved in Wix as shown below and verified in public DNS. Other subdomains and records were retained.
-5. Verified: the new main website and CSS, JavaScript, and logo load over HTTP; the apex redirects to www. All 24 main-site Wix links now use shop.genuine4ever.com. Remaining verification: GitHub's new HTTPS certificate was still provisioning at 12:48 PM America/New_York. Confirm HTTPS at both www and apex, then confirm or enable Enforce HTTPS in GitHub Pages when available. Do not bypass a browser certificate warning.
+5. Completed: the new main website loads over HTTPS at www.genuine4ever.com with a valid secure connection. All 24 main-site Wix links use shop.genuine4ever.com.
+6. Completed on 2026-11-13: restored www.genuine4ever.com in GitHub Pages settings after finding the custom-domain field empty. GitHub reported DNS check successful. Enabled Enforce HTTPS and verified that it remained checked after reloading settings.
+7. Verified with normal TLS checks: HTTPS www returns 200; HTTPS apex redirects to HTTPS www; HTTP www redirects to HTTPS www; HTTP apex redirects through www to HTTPS; the Wix shop catalog returns HTTPS 200. The production site also opened successfully in Chrome without a certificate warning.
 
 ## Configured website DNS
 
