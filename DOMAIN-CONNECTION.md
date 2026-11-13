@@ -4,7 +4,7 @@ Prepared 2026-11-13 for www.genuine4ever.com.
 
 ## Required sequence
 
-1. Confirm https://shop.genuine4ever.com/category/all-products and all three product pages work with a valid HTTPS certificate. Wix currently has the shop as a redirected domain, with domain verification in progress.
+1. Confirm https://shop.genuine4ever.com/category/all-products and all three product pages work with a valid HTTPS certificate. The shop must remain the Wix site's primary domain.
 2. Set shop.genuine4ever.com as the primary domain of the existing Premium Genuine Life Ent Wix site. Verify that it no longer redirects to www.
 3. Merge the domain migration into main. This branch-published GitHub Pages site reads the root CNAME file. Verify the Pages deployment and custom-domain redirect before changing public DNS.
 4. Change only apex A and www CNAME website records in Wix DNS to the GitHub targets below; retain other subdomains and records.
@@ -29,9 +29,9 @@ Prepared 2026-11-13 for www.genuine4ever.com.
 - Newly added by Wix: shop and www.shop -> initial.wixdns.net; TTL 1 hour. Preserve these provider-generated records.
 - Wix UI showed no existing MX, TXT, or SRV records.
 
-## Current blocker
+## Wix store activation
 
-Wix accepted shop.genuine4ever.com and created both DNS records, but reports domain verification in progress. HTTP reaches Wix and redirects to the existing primary domain. HTTPS currently fails with ERR_SSL_PROTOCOL_ERROR. The Wix verification flow rendered blank CNAME values and returned a temporary technical issue. Do not move the public website to GitHub before the store hostname can serve the existing shopping flow securely.
+Wix completed shop.genuine4ever.com activation on 2026-11-13. The shop was set as the primary domain of the existing Genuine Life Ent site. Its HTTPS catalog returns HTTP 200 and remains at shop.genuine4ever.com. A temporary Wix verification error resolved during setup.
 
 ## References
 
