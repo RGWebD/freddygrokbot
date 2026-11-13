@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#070707">
+  <title>Page not found · Genuine Life Entertainment</title>
+  <link rel="icon" href="/assets/icon-32.png" sizes="32x32">
+  <script>
+  (() => {
+    const legacyWixPaths = new Set([
+      "/blog",
+      "/cart-page",
+      "/category/all-products",
+      "/category/crime-novels",
+      "/category/romance-books",
+      "/category/street-literature",
+      "/post/discover-new-authors-in-street-literature-and-romance",
+      "/post/join-our-reading-community-books-and-merchandise",
+      "/post/top-crime-novels-that-redefine-the-genre-today",
+      "/product-page/beneath-the-surface",
+      "/product-page/shadows-of-deceit",
+      "/product-page/the-silent-witness"
+]);
+    const path = window.location.pathname;
+    if (legacyWixPaths.has(path)) {
+      window.location.replace(
+        'https://shop.genuine4ever.com' + path + window.location.search + window.location.hash
+      );
+    }
+  })();
+  </script>
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; min-height: 100vh; display: grid; place-items: center; padding: 2rem; background: #070707; color: #f5f2e9; font: 1rem/1.6 system-ui, sans-serif; }
+    main { width: 100%; max-width: 38rem; }
+    .brand { color: #d5b268; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
+    h1 { margin: .75rem 0; font-size: clamp(2.4rem, 7vw, 4rem); line-height: 1.1; }
+    p { color: #c9c5ba; }
+    nav { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: 1.75rem; }
+    a { display: inline-block; padding: .8rem 1.2rem; border: 1px solid #d5b268; border-radius: .35rem; color: #f5f2e9; font-weight: 650; text-decoration: none; }
+    a:first-child { background: #d5b268; color: #070707; }
+    a:hover { filter: brightness(1.15); }
+    a:focus-visible { outline: 3px solid #fff; outline-offset: 4px; }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="brand">Genuine Life Entertainment</div>
+    <h1>Page not found.</h1>
+    <p>This page may have moved. Explore Freddy Scurry’s books on our website, or visit the store to shop the collection.</p>
+    <nav aria-label="Find your way">
+      <a href="https://www.genuine4ever.com/">Visit the website</a>
+      <a href="https://shop.genuine4ever.com/category/all-products">Shop the books</a>
+    </nav>
+  </main>
+</body>
+</html>
